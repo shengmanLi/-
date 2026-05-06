@@ -1,0 +1,2 @@
+﻿best_pair_name,best_A_file,best_B_file,best_method_used,best_distance_m,best_confidence,best_onset_a,best_onset_b,best_extreme_type_a,best_extreme_type_b
+2026-03-17_12-52-00_11265-28672-26881__2026-03-17_12-52-00_11265-27648-31747,2026-03-17_12-52-00_11265-28672-26881.csv,2026-03-17_12-52-00_11265-27648-31747.csv,wavelet_modulus_maxima,49600.95011876484,0.05841639709602682,508,520,peak,peak

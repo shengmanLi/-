@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <title>双端行波故障定位报告 v3.0（小波模极大值法）</title>
+</head>
+<body>
+  <h1>双端行波故障定位报告 v3.0</h1>
+  <p>算法：小波模极大值法（专利 CN120275771A）</p>
+  <p>严格模式：启用</p>
+  <p>小波层数: 4 | 差分阈值倍数: 0.2</p>
+  <h2>运行概览</h2>
+  <p>总配对数: 3 | 成功配对数: 2</p>
+  <p>最佳结果: {'best_pair_name': '2026-03-17_12-52-00_11265-28672-26881__2026-03-17_12-52-00_11265-27648-31747', 'best_A_file': '2026-03-17_12-52-00_11265-28672-26881.csv', 'best_B_file': '2026-03-17_12-52-00_11265-27648-31747.csv', 'best_method_used': 'wavelet_modulus_maxima', 'best_distance_m': 49600.95011876484, 'best_confidence': 0.05841639709602682, 'best_onset_a': 508, 'best_onset_b': 520, 'best_extreme_type_a': 'peak', 'best_extreme_type_b': 'peak'}</p>
+
+  <h2>参数快照</h2>
+  <ul><li><b>LINE_LENGTH_M</b>: 100000.0</li><li><b>WAVE_SPEED</b>: 280000000.0</li><li><b>FS</b>: 4210000.0</li><li><b>BASE_RATIO</b>: 0.2</li><li><b>WAVELET_LEVELS</b>: 4</li><li><b>WAVELET_DY_TH</b>: 0.2</li><li><b>WAVELET_M</b>: 300</li><li><b>WAVELET_THRESH_RATIOS</b>: [1.0, 0.3, 0.2, 0.3]</li><li><b>STRICT_ALIGN</b>: True</li><li><b>MAX_PLOT_PAIRS</b>: 30</li><li><b>PLOT_DPI</b>: 130</li></ul>
+
+  <h2>自动结论与建议</h2>
+  <ul><li>总配对数=3，成功数=2，成功率=66.7%，平均置信度=0.021。</li><li>主要失败原因：B端未检测到满足条件的极值点（1次）。</li></ul>
+
+  <h2>全局总览图</h2>
+  <img src='plots/summary_overview.png' width='950'>
+
+  <h2>逐对图像</h2>
+  
+            <h3>Pair 1 | 2026-03-17_12-51-59_17666-21249-17664__2026-03-17_12-51-59_17666-20225-65025</h3>
+            <p>success=True | distance_m=100000.0 | confidence=0.0033805060995087295 | reason=</p>
+            <p>
+              A onset=2110 (peak) |
+              B onset=558 (peak) |
+              Δt=0.000368646080760095
+            </p>
+            <div><b>图：原始电压 + 平滑曲线 + 极值点标记</b><br><img src='plots/0001_2026-03-17_12-51-59_17666-21249-17664__2026-03-17_12-51-59_17666-20225-65025_wavelet_extrema.png' width='950'></div>
+            <hr>
+            
+            <h3>Pair 2 | 2026-03-17_12-52-00_11265-28672-26881__2026-03-17_12-52-00_11265-27648-31747</h3>
+            <p>success=True | distance_m=49600.95011876484 | confidence=0.05841639709602682 | reason=</p>
+            <p>
+              A onset=508 (peak) |
+              B onset=520 (peak) |
+              Δt=-2.850356294536817e-06
+            </p>
+            <div><b>图：原始电压 + 平滑曲线 + 极值点标记</b><br><img src='plots/0002_2026-03-17_12-52-00_11265-28672-26881__2026-03-17_12-52-00_11265-27648-31747_wavelet_extrema.png' width='950'></div>
+            <hr>
+            
+            <h3>Pair 3 | 2026-03-17_16-57-48_61696-28930-8194__2026-03-17_16-57-48_61696-27906-4867</h3>
+            <p>success=False | distance_m=None | confidence=0.0 | reason=B端未检测到满足条件的极值点</p>
+            <p>
+              A onset=1044 (peak) |
+              B onset=None (None) |
+              Δt=None
+            </p>
+            <div><b>图：原始电压 + 平滑曲线 + 极值点标记</b><br><img src='plots/0003_2026-03-17_16-57-48_61696-28930-8194__2026-03-17_16-57-48_61696-27906-4867_wavelet_extrema.png' width='950'></div>
+            <hr>
+            
+</body>
+</html>
